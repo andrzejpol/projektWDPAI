@@ -1,3 +1,16 @@
 <?php
 
-echo "Hello there :D";
+require 'Routing.php';
+
+$path = trim($_SERVER['REQUEST_URI'], '/');
+$path = parse_url($path, PHP_URL_PATH);
+
+Routing::get('', 'DefaultController');
+Routing::get('cars', 'DefaultController');
+Routing::get('main', 'DefaultController');
+Routing::post('login', 'SecurityController');
+Routing::get('signup', 'AuthController');
+Routing::get('signin', 'AuthController');
+Routing::get('faq', 'DefaultController');
+Routing::get('contact', 'DefaultController');
+Routing::run($path);

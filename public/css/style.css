@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, "sans-serif";
+  font-size: 10px;
+}
+
+#error {
+  color: red;
+  font-weight: bold;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.wrapper {
+  width: 1720px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 80%;
+}
+
+.logo img {
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  cursor: pointer;
+  margin: 0 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+li:last-child {
+  margin-left: 50px;
+}
+
+.sign-in {
+  font-size: 1.6rem;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #2d9cdb;
+  color: white;
+}
+
+.sign-in:hover {
+  background: #2ea2dc;
+}
+
+.input-label {
+  font-weight: 600;
+}
+
+.form-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-wrapper {
+  width: 500px;
+  height: 500px;
+  background: #2d9cdb;
+  margin-right: 180px;
+  border-radius: 9px;
+  padding: 60px;
+  justify-content: space-between;
+}
+
+.form-title {
+  color: white;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.form-description {
+  color: white;
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+}
+
+.input-label {
+  color: white;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: white;
+  background: #f2994a;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #f08f3a;
+}
+
+.date-wrapper {
+  justify-content: space-between;
+}
+
+/*Best Car*/
+.best-car {
+  margin-top: 70px;
+}
+
+.car-wrapper {
+  background: #2d9cdb;
+  width: 250px;
+  height: 300px;
+  border-radius: 9px;
+}
+
+.car-wrapper img {
+  width: 100%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.car-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+.cars {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button.book {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 30px;
+  background: #f08f3a;
+  color: white;
+  cursor: pointer;
+}
+
+p.car-model {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: white;
+}
+
+p.car-price {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: white;
+}
+
+/*Testimonials*/
+.testimonials {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.opinions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+}
+
+.opinion {
+  width: 500px;
+  height: 150px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.opinion-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+}
+
+.image {
+  width: 150px;
+  height: 100%;
+}
+
+.image img {
+  height: 100%;
+}
+
+p.description {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p.name {
+  font-weight: 600;
+}
+
+/*Footer*/
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid lightgrey;
+}
+
+/*Login page*/
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginModal-wrapper {
+  height: 600px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 11px 14px 29px -18px rgba(66, 68, 90, 1);
+}
+
+.logo-and-review {
+  width: 50%;
+  background-color: #3caeee;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.login-logo {
+  height: 200px;
+}
+
+.login-logo > img {
+  height: 100%;
+}
+
+.client-opinion {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.client-opinion > p {
+  line-height: 20px;
+  font-size: 13px;
+  width: 75%;
+}
+
+.login-form {
+  padding: 20px 30px;
+}
+
+.login-form > h2 {
+  font-size: 30px;
+}
+
+.login-form > form > input {
+  border: 1px solid lightgrey;
+}
+
+form {
+  margin: 30px 0;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.login-form > form > button {
+  width: 120px;
+  background-color: #3caeee;
+}
