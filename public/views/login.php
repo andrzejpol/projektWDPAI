@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,14 +34,25 @@
         </div>
         <div class="login-form">
           <h2>Hello Again!</h2>
-          <form class="loginForm">
+          <form class="loginForm" action="login" method="POST">
             <label for="email">Email address</label>
             <input type="email" id="email" name="email" required>
             <label for="password">Password</label>
             <input type="password" name="password" required>
+            <div class="register-error-message">
+              <p id="error">
+                <span class="bold-message">
+                  <?php if (isset($errors)) {
+                    foreach ($errors as $error) {
+                      echo $error;
+                    }
+                  }
+                  ?>
+                </span>
+              </p>
+            </div>
             <button type="submit">Sign In</button>
           </form>
-          <p id="error"></p>
         </div>
       </div>
     </div>

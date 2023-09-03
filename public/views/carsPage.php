@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['userId'])) {
+  $url = "http://$_SERVER[HTTP_HOST]";
+  header("Location: {$url}/signin");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -25,6 +25,11 @@ class AuthController extends AppController
         $this->render('login');
     }
 
+    public function logout()
+    {
+        $this->render('logout');
+    }
+
     public function register()
     {
         if (!$this->isPost()) {
@@ -48,10 +53,42 @@ class AuthController extends AppController
             return $this->render('register', ['errors' => ['Please provide proper password.']]);
         }
 
-        $user = new User($email, $password, $username);
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $user = new User($email, $hashedPassword, $username);
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You have been successfully registered.']]);
+    }
+
+    public function login()
+    {
+        if (!$this->isPost()) {
+            return $this->render('login');
+        }
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return $this->render('login', ['errors' => ['Invalid email address.']]);
+        }
+
+        $user =  $this->userRepository->getUserByEmail($email);
+
+        if (!$user) {
+            return $this->render('login', ['errors' => ['User does not exist.']]);
+        }
+
+        if (!password_verify($password, $user->getPassword())) {
+            return $this->render('login', ['errors' => ['Wrong password.']]);
+        }
+
+        session_start();
+        $_SESSION['userId'] = $user->getId();
+        $_SESSION['username'] = $user->getUsername();
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/cars");
     }
 }

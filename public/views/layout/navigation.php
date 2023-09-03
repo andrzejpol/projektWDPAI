@@ -10,6 +10,7 @@
             <li><a href="/contact">Contact us</a></li>
             <li><a href="/signin">Signin</a></li>
             <li><a href="/signup">Signup</a></li>
+            <li><a href="/logout">Logout</a></li>
             <li><button class="sign-in">Sign in</button></li>
         </ul>
     </nav>
