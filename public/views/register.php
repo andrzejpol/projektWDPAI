@@ -31,7 +31,7 @@
         <div class="login-form">
           <h2>Join Car Rent</h2>
           <p>Flexible rentals, no hidden fees, price match guarantee...</p>
-          <form class="loginForm">
+          <form class="loginForm" action="register" method="POST">
             <label for="username">Full name</label>
             <input type="text" id="username" name="username">
             <label for="email">Email address</label>

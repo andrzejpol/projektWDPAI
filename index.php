@@ -11,6 +11,7 @@ Routing::get('main', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::get('signup', 'AuthController');
 Routing::get('signin', 'AuthController');
+Routing::post('register', 'AuthController');
 Routing::get('faq', 'DefaultController');
 Routing::get('contact', 'DefaultController');
 Routing::run($path);
