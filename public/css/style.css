@@ -352,3 +352,7 @@ form {
   width: 120px;
   background-color: #3caeee;
 }
+
+h2.user-greeting {
+  font-size: 20px;
+}

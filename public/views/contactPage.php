@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +15,18 @@
 
 <body>
   <div class="wrapper">
-    <?php include('public/views/layout/navigation.php') ?>
-    <main>
-      <h2>Contact page</h2>
-    </main>
-    <?php include('public/views/layout/footer.php') ?>
-  </div>
+    <div class="wrapper">
+      <?php if (!isset($_SESSION['userId'])) {
+        include('public/views/layout/navigation.php');
+      } else {
+        include('public/views/layout/navigation-2.php');
+      }
+      ?>
+      <main>
+        <h2>Contact page</h2>
+      </main>
+      <?php include('public/views/layout/footer.php') ?>
+    </div>
 </body>
 
 </html>

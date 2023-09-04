@@ -8,10 +8,8 @@
             <li><a href="/cars">Cars</a></li>
             <li><a href="/faq">FAQs</a></li>
             <li><a href="/contact">Contact us</a></li>
-            <li><a href="/signin">Signin</a></li>
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/logout">Logout</a></li>
-            <li><button class="sign-in">Sign in</button></li>
+            <li><a href="/signin" class="sign-in">Signin</a></li>
+            <li><a href="/signup" class="sign-in">Signup</a></li>
         </ul>
     </nav>
 </header>

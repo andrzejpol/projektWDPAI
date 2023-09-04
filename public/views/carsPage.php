@@ -19,7 +19,12 @@ if (!isset($_SESSION['userId'])) {
 
 <body>
   <div class="wrapper">
-    <?php include('public/views/layout/navigation.php') ?>
+    <?php if (!isset($_SESSION['userId'])) {
+      include('public/views/layout/navigation.php');
+    } else {
+      include('public/views/layout/navigation-2.php');
+    }
+    ?>
     <main>
       <h1>Cars</h1>
     </main>

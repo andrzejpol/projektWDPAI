@@ -87,6 +87,7 @@ class AuthController extends AppController
         session_start();
         $_SESSION['userId'] = $user->getId();
         $_SESSION['username'] = $user->getUsername();
+        $_SESSION['user_role'] = $user->getUserRole();
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/cars");
