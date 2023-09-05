@@ -15,4 +15,7 @@ Routing::get('signin', 'AuthController');
 Routing::post('register', 'AuthController');
 Routing::get('faq', 'DefaultController');
 Routing::get('contact', 'DefaultController');
+Routing::get('usersEdit', 'UsersController');
+Routing::post('deleteUser', 'UsersController');
+Routing::get('carsEdit', 'DefaultController');
 Routing::run($path);

@@ -12,8 +12,8 @@ session_start();
         <nav>
             <ul>
                 <li><a class="navLink" href="/">Main</a></li>
-                <li><a href="/cars/add">Add new car</a></li>
-                <li><a href="/users">Users</a></li>
+                <li><a href="/carsEdit">Edit Cars</a></li>
+                <li><a href="/usersEdit">Edit Users</a></li>
                 <li><a class="sign-in" href="/logout">Logout</a></li>
             </ul>
         </nav>
