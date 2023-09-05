@@ -14,6 +14,7 @@ if ($_SESSION['user_role'] !== "admin") {
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Users Edit</title>
+    <script type="text/javascript" src="public/js/editUser.js" defer></script>
     <link href="public/css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
@@ -27,7 +28,10 @@ if ($_SESSION['user_role'] !== "admin") {
             }
             ?>
             <main>
-                <h1 class="table-title">All users</h1>
+                <div class="title-wrapper">
+                    <h1 class="table-title">All users</h1>
+                    <button class="edit-button">Edit users</button>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -52,6 +56,15 @@ if ($_SESSION['user_role'] !== "admin") {
                                         </form>
                                     </td>
                                 </tr>
+                                <tr class="row-user-edit">
+                                    <form method="POST" action="/updateUser/<?= $user->getId() ?>">
+                                        <td><input type="text" disabled value="<? echo $user->getId() ?>" name="userId"></td>
+                                        <td><input type="text" value="<? echo $user->getUsername() ?>" name="updatedUsername" /></td>
+                                        <td><input type="text" value="<? echo $user->getEmail() ?>" name="updatedMail" /></td>
+                                        <td><input type="text" value="<? echo $user->getUserRole() ?>" name="updatedUserRole" /></td>
+                                        <td><button type="submit">Save</button></td>
+                                    </form>
+                                </tr>
                             <?php endforeach; ?>
                         <?php else : ?>
                             <tr>
@@ -60,7 +73,6 @@ if ($_SESSION['user_role'] !== "admin") {
                         <?php endif; ?>
                     </tbody>
                 </table>
-
             </main>
             <?php include('public/views/layout/footer.php') ?>
         </div>

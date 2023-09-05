@@ -360,7 +360,6 @@ h2.user-greeting {
 /*Table*/
 h1.table-title {
   font-size: 25px;
-  margin-bottom: 30px;
 }
 table {
   width: 100%;
@@ -386,4 +385,30 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #ddd;
+}
+
+div.title-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+button.edit-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: white;
+  background: #f2994a;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button.edit-button:hover {
+  background: #f08f3a;
+}
+
+.row-user-edit {
+  display: none;
 }

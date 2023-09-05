@@ -68,4 +68,14 @@ class UserRepository extends Repository
         $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
     }
+
+    public function editUser(int $id, string $username, string $email, string $user_role)
+    {
+        $stmt = $this->database->connect()->prepare('UPDATE users SET username = :username, email = :email, user_role = :user_role WHERE id = :id');
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':user_role', $user_role, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

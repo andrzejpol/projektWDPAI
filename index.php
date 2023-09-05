@@ -17,5 +17,6 @@ Routing::get('faq', 'DefaultController');
 Routing::get('contact', 'DefaultController');
 Routing::get('usersEdit', 'UsersController');
 Routing::post('deleteUser', 'UsersController');
+Routing::post('updateUser', 'UsersController');
 Routing::get('carsEdit', 'DefaultController');
 Routing::run($path);

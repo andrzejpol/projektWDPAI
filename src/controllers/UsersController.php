@@ -35,4 +35,19 @@ class UsersController extends AppController
         }
         header("Location: {$url}/usersEdit");
     }
+
+    public function updateUser(int $userId)
+    {
+        if ($this->isPost()) {
+            $username = $_POST['updatedUsername'];
+            $email = $_POST['updatedMail'];
+            $user_role = $_POST['updatedUserRole'];
+
+            session_start();
+            $this->userRepository->editUser($userId, $username, $email, $user_role);
+
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/usersEdit");
+        }
+    }
 }
