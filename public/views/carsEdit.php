@@ -27,7 +27,54 @@ if ($_SESSION['user_role'] !== "admin") {
             }
             ?>
             <main>
-                <h1>Cars edit</h1>
+                <form class="editCars" action="/addCar" method="POST" ENCTYPE="multipart/form-data">
+                    <label for="carBrand">Brand:</label>
+                    <input type="text" id="carBrand" name="carBrand" autocomplete="off" required>
+
+                    <label for="carModel">Model:</label>
+                    <input type="text" id="carModel" name="carModel" autocomplete="off" required>
+
+                    <label for="pricePerDay">Price p/day:</label>
+                    <input type="number" id="pricePerDay" name="carPrice" step="0.10" autocomplete="off" required>
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="carStatus" required>
+                        <option value="available">Available</option>
+                        <option value="rented">Rented</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                    <input type="file" id="carImage" name="file" accept="image/*" required>
+
+                    <input type="submit" value="Dodaj Samochód">
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Car Id</th>
+                            <th>Car brand</th>
+                            <th>Car model</th>
+                            <th>Price per day</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Ford</td>
+                            <td>Focus</td>
+                            <td>35$</td>
+                            <td>Available</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <?php if (isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </p>
             </main>
             <?php include('public/views/layout/footer.php') ?>
         </div>

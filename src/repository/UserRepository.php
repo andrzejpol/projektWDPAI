@@ -7,7 +7,6 @@ class UserRepository extends Repository
 {
     public function addUser(User $user)
     {
-
         $stmt = $this->database->connect()->prepare('
             INSERT INTO users (email, password, username, user_role) VALUES (?, ?, ?, ?)
         ');

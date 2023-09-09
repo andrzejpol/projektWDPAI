@@ -412,3 +412,53 @@ button.edit-button:hover {
 .row-user-edit {
   display: none;
 }
+
+/*Edit cars*/
+
+form.editCars {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.editCars label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.editCars input[type="text"],
+.editCars input[type="number"],
+.editCars select {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.editCars select {
+  height: 47px;
+}
+
+.editCars input[type="submit"] {
+  background-color: #2d9cdb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.editCars input[type="submit"]:hover {
+  background-color: #3caeee;
+}
