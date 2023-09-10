@@ -22,8 +22,27 @@ session_start();
         include('public/views/layout/navigation-2.php');
       }
       ?>
-      <main>
-        <h2>Contact page</h2>
+      <main class="contact-page">
+        <section class="contact-info">
+          <h2>Contact us</h2>
+          <ul>
+            <li>E-mail address: <a href="mailto:kontakt@example.com">contact@example.com</a></li>
+            <li>Phone number: <a href="tel:+123456789">+123 456 789</a></li>
+            <li>Address: 123 Main Street, City, Country</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Do you have any suggestion?</h2>
+          <form action="process_contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </section>
       </main>
       <?php include('public/views/layout/footer.php') ?>
     </div>
