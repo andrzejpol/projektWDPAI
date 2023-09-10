@@ -10,6 +10,7 @@ session_start();
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
   <title>FAQ</title>
+  <script type="text/javascript" src="/public/js/faqPage.js" defer></script>
   <link href="public/css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
@@ -23,7 +24,8 @@ session_start();
       }
       ?>
       <main>
-        <h1>FAQ</h1>
+        <section class="faq">
+        </section>
       </main>
       <?php include('public/views/layout/footer.php') ?>
     </div>

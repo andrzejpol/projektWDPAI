@@ -24,9 +24,4 @@ class DefaultController extends AppController
     {
         $this->render('contactPage');
     }
-
-    public function carsEdit()
-    {
-        $this->render('carsEdit');
-    }
 }

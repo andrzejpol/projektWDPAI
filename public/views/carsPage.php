@@ -14,6 +14,7 @@ if (!isset($_SESSION['userId'])) {
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
   <title>Cars</title>
+  <script type="text/javascript" src="/public/js/carsPage.js" defer></script>
   <link href="public/css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
@@ -26,7 +27,7 @@ if (!isset($_SESSION['userId'])) {
     }
     ?>
     <main>
-      <h1>Cars</h1>
+      <div class="allCars"></div>
     </main>
     <?php include('public/views/layout/footer.php') ?>
   </div>

@@ -45,7 +45,7 @@ if ($_SESSION['user_role'] !== "admin") {
                     </select>
                     <input type="file" id="carImage" name="file" accept="image/*" required>
 
-                    <input type="submit" value="Dodaj Samochód">
+                    <input type="submit" value="Add new car">
                 </form>
                 <table>
                     <thead>
@@ -55,16 +55,32 @@ if ($_SESSION['user_role'] !== "admin") {
                             <th>Car model</th>
                             <th>Price per day</th>
                             <th>Status</th>
+                            <th>Image</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>Ford</td>
-                            <td>Focus</td>
-                            <td>35$</td>
-                            <td>Available</td>
-                        </tr>
+                        <?php if (count($cars)) : ?>
+                            <?php foreach ($cars as $car) : ?>
+                                <tr>
+                                    <td><?= $car->getId() ?></td>
+                                    <td><?= $car->getCarBrand() ?></td>
+                                    <td><?= $car->getCarModel() ?></td>
+                                    <td><?= $car->getCarPrice() ?></td>
+                                    <td><?= $car->getCarStatus() ?></td>
+                                    <td><?= $car->getCarImage() ?></td>
+                                    <td>
+                                        <form method="POST" action="/deleteCar/<?= $car->getId() ?>">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else : ?>
+                            <tr>
+                                <td colspan="7">You do not have any cars.</td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
                 <p>

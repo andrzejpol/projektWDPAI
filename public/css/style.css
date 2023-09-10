@@ -27,7 +27,7 @@
 .wrapper {
   width: 1720px;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -461,4 +461,59 @@ form.editCars {
 
 .editCars input[type="submit"]:hover {
   background-color: #3caeee;
+}
+
+div.allCars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+div.allCars > .img-wrapper {
+  width: 250px;
+  height: 220px;
+}
+
+.img-wrapper img {
+  height: 220px;
+}
+
+/*FAQ*/
+.faq {
+  max-width: 800px; /* Dostosuj szerokość do swoich potrzeb */
+  margin: 0 auto;
+}
+
+/* Styl dla pytań */
+.question {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styl dla nagłówka pytania */
+.question h2 {
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/* Styl dla odpowiedzi (ukrytej początkowo) */
+.answer {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.answer p {
+  font-size: 15px;
+}
+
+/* Dodaj efekt hover dla pytań, jeśli chcesz */
+.question:hover h2 {
+  background-color: #e0e0e0;
 }
