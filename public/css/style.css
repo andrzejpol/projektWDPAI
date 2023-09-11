@@ -596,3 +596,44 @@ div.allCars > .img-wrapper {
 .contact-page button[type="submit"]:hover {
   background-color: #2ea2dc;
 }
+
+.rent-popup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(171, 171, 171, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.rent-popup-wrapper {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.close-button {
+  position: relative;
+  top: 10px;
+  left: 370px;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+p.car-id {
+  display: none;
+}

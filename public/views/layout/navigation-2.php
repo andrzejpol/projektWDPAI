@@ -22,6 +22,7 @@ session_start();
             <ul>
                 <li><a class="navLink" href="/">Main</a></li>
                 <li><a href="/cars">Cars</a></li>
+                <li><a href="/rentals">My rentals</a></li>
                 <li><a href="/faq">FAQs</a></li>
                 <li><a href="/contact">Contact us</a></li>
                 <li><a class="sign-in" href="/logout">Logout</a></li>

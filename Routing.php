@@ -6,6 +6,7 @@ require_once 'src/controllers/AuthController.php';
 require_once 'src/controllers/UsersController.php';
 require_once 'src/controllers/CarsController.php';
 require_once 'src/controllers/FaqsController.php';
+require_once 'src/controllers/RentalController.php';
 
 class Routing
 {
