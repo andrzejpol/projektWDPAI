@@ -27,7 +27,6 @@ if (!isset($_SESSION['userId'])) {
         }
         ?>
         <main>
-            <div class="allRentals">My rentals</div>
             <table>
                 <thead>
                     <tr>
@@ -49,8 +48,12 @@ if (!isset($_SESSION['userId'])) {
                                 <td><?= $rental['end_date'] ?></td>
                                 <td><?= $rental['status'] ?></td>
                                 <td>
-                                    <form>
-                                        <button type="submit">Return car</button>
+                                    <form method="POST" action="/cancelrent/<?= $rental['car_id'] ?>">
+                                        <?php if ($rental['status'] !== "Active") : ?>
+                                            <p>No action.</p>
+                                        <?php else : ?>
+                                            <button type="submit">Return car</button>
+                                        <?php endif; ?>
                                     </form>
                                 </td>
                             </tr>

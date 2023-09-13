@@ -39,9 +39,9 @@ if ($_SESSION['user_role'] !== "admin") {
 
                     <label for="status">Status:</label>
                     <select id="status" name="carStatus" required>
-                        <option value="available">Available</option>
-                        <option value="rented">Rented</option>
-                        <option value="maintenance">Maintenance</option>
+                        <option value="Available">Available</option>
+                        <option value="Rented">Rented</option>
+                        <option value="Maintenance">Maintenance</option>
                     </select>
                     <input type="file" id="carImage" name="file" accept="image/*" required>
 

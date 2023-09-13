@@ -33,16 +33,6 @@ session_start();
               <label class="input-label" for="pick-up-location">Location</label>
               <input id="pick-up-location" name="location" type="text" placeholder="Cracow" />
             </div>
-            <div class="date-wrapper row">
-              <div class="pick-up-wrapper column">
-                <label class="input-label" for="pick-up">Pick-up date</label>
-                <input id="pick-up" name="pick-up" type="date" />
-              </div>
-              <div class="drop-off-wrapper column">
-                <label class="input-label" for="drop-off">Drop-off date</label>
-                <input id="drop-off" name="drop-off" type="date" />
-              </div>
-            </div>
             <button type="submit">Search</button>
           </form>
         </div>
@@ -56,7 +46,6 @@ session_start();
               <div class="car-details">
                 <p class="car-model">Fiat Tipo</p>
                 <p class="car-price">Od 200zł/dzień</p>
-                <div class="stars">stars</div>
               </div>
               <button class="book">Book</button>
             </div>
@@ -67,7 +56,6 @@ session_start();
               <div class="car-details">
                 <p class="car-model">Fiat Tipo</p>
                 <p class="car-price">Od 200zł/dzień</p>
-                <div class="stars">stars</div>
               </div>
               <button class="book">Book</button>
             </div>
@@ -78,7 +66,6 @@ session_start();
               <div class="car-details">
                 <p class="car-model">Fiat Tipo</p>
                 <p class="car-price">Od 200zł/dzień</p>
-                <div class="stars">stars</div>
               </div>
               <button class="book">Book</button>
             </div>

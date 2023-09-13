@@ -25,4 +25,5 @@ Routing::get('getallcars', 'CarsController');
 Routing::get('getallfaqs', 'FaqsController');
 Routing::get('rentals', 'RentalController');
 Routing::post('rentcar', 'RentalController');
+Routing::post('cancelrent', 'RentalController');
 Routing::run($path);

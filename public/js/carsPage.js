@@ -39,8 +39,6 @@ function rentHandler() {
   const carIdValues = document.querySelectorAll(".car-id");
   const rentPopups = document.querySelectorAll(".rent-popup");
   const closeButtons = document.querySelectorAll(".close-button");
-  const totalPricesText = document.querySelectorAll(".total-price-span");
-  const carPrices = document.querySelectorAll(".car-price-span");
   const rentButtons = document.querySelectorAll(".rent-button");
   const pickUpDates = document.querySelectorAll(".pick-up-popup");
   const dropOffDates = document.querySelectorAll(".drop-off-popup");
@@ -63,6 +61,7 @@ function rentHandler() {
         body: JSON.stringify(data),
       });
       rentPopups[index].style.display = "none";
+      location.reload();
     });
   });
 
@@ -82,6 +81,7 @@ function rentHandler() {
 }
 
 function renderCar(car) {
+  console.log(car.image);
   const html = `
   <div class="car-wrapper">
     <p class="car-id">${car.id}</p>
@@ -92,7 +92,6 @@ function renderCar(car) {
         <div class="car-details">
             <p class="car-model">${car.brand} ${car.model}</p>
             <p class="car-price"><span class="car-price-span">${car.price}</span>zł/dzień</p>
-            <div class="stars">stars</div>
         </div>
         <button class="book">Rent</button>
     </div>
@@ -107,7 +106,6 @@ function renderCar(car) {
       <input id="pick-up-popup" class="pick-up-popup" name="pick-up" type="date" />
       <label for="drop-off-popup">Drop-off date</label>
       <input id="drop-off-popup" class="drop-off-popup" name="drop-off" type="date" />
-      <p class="total-price">Total price: <span class="total-price-span">400</span>zł</p>
       <button class="rent-button">Rent a car</button>
     </div>
   </div>

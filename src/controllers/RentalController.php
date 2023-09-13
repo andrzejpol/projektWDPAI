@@ -37,4 +37,21 @@ class RentalController extends AppController
             $this->rentalRepository->rentCar($id, $decoded['car_id'], $decoded['start_date'], $decoded['end_date'], $decoded['status'], $decoded['total_cost']);
         }
     }
+
+    public function cancelrent(int $carid)
+    {
+        $url = "http://$_SERVER[HTTP_HOST]";
+
+        if (!$this->isPost()) {
+            header("Location: {$url}/rentals");
+        }
+
+        session_start();
+        $id = $_SESSION['userId'];
+        if (is_numeric($carid)) {
+            $carId = (int)$carid;
+            $this->rentalRepository->cancelRent($carId, $id);
+        }
+        header("Location: {$url}/rentals");
+    }
 }

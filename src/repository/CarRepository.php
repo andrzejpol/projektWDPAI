@@ -31,7 +31,7 @@ class CarRepository extends Repository
     public function getAllCarsFromView(): array
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM v_cars_cities
+            SELECT * FROM v_cars_cities WHERE status = \'Available\'
         ');
         $stmt->execute();
 
