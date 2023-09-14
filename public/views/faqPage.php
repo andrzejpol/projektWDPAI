@@ -11,7 +11,10 @@ session_start();
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
   <title>FAQ</title>
   <script type="text/javascript" src="/public/js/faqPage.js" defer></script>
-  <link href="public/css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/header.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/footer.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/faq.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/style2.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>

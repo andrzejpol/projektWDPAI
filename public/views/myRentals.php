@@ -15,7 +15,10 @@ if (!isset($_SESSION['userId'])) {
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>My rentals</title>
     <script type="text/javascript" src="/public/js/carsPage.js" defer></script>
-    <link href="public/css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="public/css/header.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="public/css/footer.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="public/css/myRentals.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="public/css/style2.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -73,8 +76,3 @@ if (!isset($_SESSION['userId'])) {
 </body>
 
 </html>
-
-//TODO
-mozliwosć oddawania auta (zmiana statusu auta na "Available")
-stworzenie widoku rentals_cars
-rezerwacja auta(zmiana statusu auta na "Rented" i nie pokazywanie go w widoku cars)

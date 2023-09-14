@@ -81,7 +81,6 @@ function rentHandler() {
 }
 
 function renderCar(car) {
-  console.log(car.image);
   const html = `
   <div class="car-wrapper">
     <p class="car-id">${car.id}</p>

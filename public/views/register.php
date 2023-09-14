@@ -9,7 +9,10 @@ session_start();
   <meta charset="UTF-8" />
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-  <link rel="stylesheet" href="public/css/style.css?v=<?php echo time(); ?>" type="text/css" />
+  <link href="public/css/header.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/footer.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/register.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link href="public/css/style2.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
   <title>Register Page</title>
   <script type="text/javascript" src="public/js/signup.js" defer></script>
 </head>

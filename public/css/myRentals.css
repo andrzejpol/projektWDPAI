@@ -1,0 +1,59 @@
+.main {
+  width: 100%;
+}
+
+h1.table-title {
+  font-size: 25px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 20px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+div.title-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+button[type="submit"],
+button.edit-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: white;
+  background: #f2994a;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button[type="submit"] button.edit-button:hover {
+  background: #f08f3a;
+}
+
+.row-user-edit {
+  display: none;
+}
