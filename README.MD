@@ -51,14 +51,15 @@ The project utilizes a PostgreSQL database. The repository contains two files:
 ![ERD Diagram](./readmeimg/ERD.png)
 
 ## UML
-
+![UML](./readmeimg/UML.png)
 **Models**
-
+![Models](./readmeimg/models.png)
 **Controllers**
-
+![Controllers](./readmeimg/controllers.png)
 **Repositories**
-
+![Repository](./readmeimg/repository.png)
 **Database and Routing**
+![Database and Routing](./readmeimg/other.png)
 
 ## Installation
 
